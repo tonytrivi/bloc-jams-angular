@@ -14,9 +14,6 @@ body.landing {
 .hero-content .hero-title {
     position: absolute;
     top: 40%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
     width: 100%;
     text-align: center;
     font-size: 4rem;
@@ -35,23 +32,11 @@ body.landing {
     position: relative;
     padding: 2rem;
     text-align: center;
-    opacity: 0;
-    -webkit-transform: scaleX(0.8) translateY(3rem) rotate(10deg);
-    -moz-transform: scaleX(0.8) translateY(3rem) rotate(10deg);
-    transform: scaleX(0.8) translateY(3rem) rotate(10deg);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    opacity: 1;
 }
 
 .point:hover {
     color: lightyellow;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 .point  .point-title {
