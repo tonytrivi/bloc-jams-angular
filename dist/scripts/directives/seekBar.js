@@ -51,6 +51,15 @@
                 };
                 
                 /**
+                * @function thumbStyle
+                * @scope public
+                * @desc returns the style of the handle
+                */
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
+                };
+                
+                /**
                 * @function onClickSeekBar
                 * @scope public
                 * @desc calculates a percent, when passed an event
@@ -73,7 +82,7 @@
                     var percent = calculatePercent(seekBar, event);
                     scope.$apply(function() {
                         scope.value = percent * scope.max;
-                        });
+                       });
                     });
  
                     $document.bind('mouseup.thumb', function() {

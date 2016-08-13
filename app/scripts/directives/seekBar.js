@@ -51,6 +51,15 @@
                 };
                 
                 /**
+                * @function thumbStyle
+                * @scope public
+                * @desc returns the style of the handle
+                */
+                scope.thumbStyle = function() {
+                    return {width: percentString()};
+                };
+                
+                /**
                 * @function onClickSeekBar
                 * @scope public
                 * @desc calculates a percent, when passed an event
