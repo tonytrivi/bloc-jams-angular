@@ -66,9 +66,16 @@
             });
              
             currentBuzzObject.bind('timeupdate', function() {
-                $rootScope.$apply(function() {
+                if(SongPlayer.controllerScope){
+                    SongPlayer.controllerScope.$apply(function() {
+                       SongPlayer.currentTime = currentBuzzObject.getTime();
+                    })
+                } else {
+                    $rootScope.$apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
-                })
+                    })
+                }
+                
             });
         
 
@@ -98,6 +105,12 @@
         * @type {Number}
         */
         SongPlayer.maxVolume = 100;
+         
+        /**
+        * @desc Holds a controller scope object
+        * @type {}
+        */
+        SongPlayer.controllerScope = null;
         
         /**
         * @function SongPlayer.play
