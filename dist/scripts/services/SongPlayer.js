@@ -155,13 +155,11 @@
             
             if(currentSongIndex < 0){
                 stopSong(SongPlayer.currentSong);
-                //currentBuzzObject.stop();
-                //SongPlayer.currentSong.playing = null;
             } else {
                 //get the new song, set it and play it
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
-                playSong();
+                playSong(song);
             }
         };
          
@@ -176,13 +174,11 @@
             // last song is reached
             if(currentSongIndex >= currentAlbum.songs.length) {
                 stopSong(SongPlayer.currentSong);
-                //currentBuzzObject.stop();
-                //SongPlayer.currentSong.playing = null;
             } else {
                 //get the new song, set it and play it
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
-                playSong();
+                playSong(song);
             }
         };
          
